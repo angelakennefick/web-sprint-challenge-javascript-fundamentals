@@ -178,12 +178,13 @@ function greeting(first, last){
 /* 🐴🐴🐴 Step 1: Base Constructor 🐴🐴🐴
  Use the constructor function named CuboidMaker to accept properties for length, width, and height which can be initialized as an +--object--+
 */
-function CuboidMaker(cuboidy){
-  this.length = cuboidy.length;
-  this.width = cuboidy.width;
-  this.height = cuboidy.height;
+function CuboidMaker(cuboid){
+  this.length = cuboid.length;
+  this.width = cuboid.width;
+  this.height = cuboid.height;
 }
 
+   
 
 /* 🐴🐴🐴 Step 2: Volume Method 🐴🐴🐴
   Create a method called volume using CuboidMaker's prototype that returns the volume of a given cuboid's length, width, and height
@@ -226,20 +227,39 @@ console.log(cuboid.surfaceArea()); // 130
 // 🦄🦄🦄 Topic 4: Classes 🦄🦄🦄 //
 //🦄🦄🦄 1. Take your prototypes from above and refactor into class syntax. Please rename your class CuboidMakerTwo and your object cuboidTwo 🦄🦄🦄
 class CuboidMakerTwo{
-
+  constructor(cuboidTwo){
+  this.length = cuboidTwo.length;
+  this.width = cuboidTwo.width;
+  this.height = cuboidTwo.height;
+  }
+volume(){
+  return this.length * this.width * this.height;
+}
+surfaceArea(){
+  return 2 * ((this.length * this.width) + (this.length * this.height) + (this.width * this.height));
+}
 }
 
+const cuboidTwo = new CuboidMakerTwo({
+  length: 4,
+  width: 5,
+  height: 5
+});
 
 //🦄🦄🦄 Test your volume and surfaceArea methods by uncommenting the logs below: 🦄🦄🦄
-// console.log(cuboidTwo.volume()); // 100
-// console.log(cuboidTwo.surfaceArea()); // 130
+console.log(cuboidTwo.volume()); // 100
+console.log(cuboidTwo.surfaceArea()); // 130
 
 
 
 
 
 // 🦄 💪 Stretch Task: Extend the base class CuboidMaker with a sub class called CubeMaker.  Find out the formulas for volume and surface area for cubes and create those methods using the dimension properties from CuboidMaker.  Test your work by logging out your volume and surface area. 🦄 💪
-  
+   
+   class CubeMaker extends CuboidMaker{
+
+  }
+
 
 
 

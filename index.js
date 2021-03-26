@@ -17,7 +17,7 @@ myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
-  // Function level scope allows "private" variables that can be utilized by functions inside function level scope but cannot be accessed by functions outside. Nested functions are witin the higher order function scope and so is the internal variable.
+  // Function level scope allows "private" variables that can be utilized by functions inside function level scope but cannot be accessed by functions outside. Nested functions are witin the higher order function scope and so is the internal variable declaration.
 
 
 
@@ -29,11 +29,25 @@ myFunction();
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-function summation(/*Your Code Here*/) {
-  /*Your Code Here*/
+function summation(num1) {
+  let newNum = Array.from(Array(num1 +1).keys());
+  var total = newNum.reduce(function(a,b) {
+    return a + b;
+  }, 0);
+  return total;
+}
 
-  }
- 
+  // const value = 0;
+  // let newNum = Array(num1);
+  // let result = {
+  // for(let i = 0; i < newNum.length; i++) {
+  //   value += numbers[i];
+  // }
+  // };
+  // return result;
+// }
+  
+console.log("Task 2", summation(4)); 
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
 // Given this zoo data from around the United States, follow the instructions below. Use the specific array methods in the requests below to solve the problems.

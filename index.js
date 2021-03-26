@@ -17,6 +17,7 @@ myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
+  // Function level scope allows "private" variables that can be utilized by functions inside function level scope but cannot be accessed by functions outside. Nested functions are witin the higher order function scope and so is the internal variable.
 
 
 

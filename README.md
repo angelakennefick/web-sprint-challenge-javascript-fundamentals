@@ -39,7 +39,7 @@ Both forEach and map call a function on each element in an array. ForEach doesn'
 
 3. What is closure?
     
-A closure is a function defined within another outer function.
+    A closure is a function defined within another outer function.
 
 
 4. Describe the four rules of the 'this' keyword.
